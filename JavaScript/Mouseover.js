@@ -31,4 +31,20 @@ function Mouseover(){
   mouseover.addEventListener('mouseleave', ()=>{
     logarea.innerHTML = `マウス`;
   });
+
+const character1 = document.querySelector('.character1');
+
+document.addEventListener('mousedown', ()=>{
+  
+  document.addEventListener('mousemove', onMouseMove);
+  
+  document.addEventListener('mouseup', ()=>{
+    document.removeEventListener('mousemove', onMouseMove);
+  });
+});
+function onMouseMove(event){
+  character1.style.left = `${event.clientX - 100}px`;
+  character1.style.top = `${event.clientY - 100}px`;
 }
+}
+
