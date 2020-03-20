@@ -1,5 +1,6 @@
 function LoadImage(){
   const character = document.querySelector('.character');
+  const characterbox = document.querySelector('.character-box');
 
   // ドラッグした時イベントを発生させる
   character.addEventListener('dragstart', ()=>{
@@ -21,5 +22,7 @@ function LoadImage(){
   box.addEventListener('drop', (e)=>{
     console.log('ドロップされました');
     e.preventDefault();
+    characterbox.remove('.character')
+    box.append(character)
   });
 }

@@ -29,7 +29,7 @@ window.addEventListener('keydown', handlekeydown);
 
 window.onload = ()=>{
 
-  LoadImage();
+  LoadImage(); 
   Mouseover();
   Popup();
   
@@ -49,4 +49,5 @@ function onPesize(){
   widthLog.innerHTML = `${window.innerWidth}px`;
   heightLog.innerHTML = `${window.innerHeight}px`
 }
+
 }
